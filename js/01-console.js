@@ -1,4 +1,19 @@
-console.clear()
-console.log(5)
+const { Console } = require("console");
 
-console.log(51+3)
+
+const a = 7
+const b = 8
+const c = 100
+
+
+console.log(a-6+b+c);
+
+const liekana = 31 % 3
+console.log(liekana);
+
+const html = <header>
+<Image.search> 
+    
+</Image.search>
+
+</header>
