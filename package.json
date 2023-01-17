@@ -4,6 +4,7 @@
   "description": "",
   "main": "01-console.js",
   "scripts": {
+    "homework": "nodemon ./js/homework.js",
     "if": "nodemon ./js/06-if.js",
     "aray": "nodemon ./js/05-array.js",
     "boolean": "nodemon ./js/04-boolean.js",
