@@ -128,9 +128,77 @@ if (v.length >= d.length) {
     console.log('bandykite dar karta');
 }
 
+/*
+Ciklo for panaudojimas
+Suskaičiuoti ką gausime susumavus skaičius intervale tarp (imtinai):
+0 … 0*/
+let zero = 0;
+console.log("zero")
 
 
+/*
+0 … 4
+0 … 100
+574 … 815
+-50 … 50
+-70 … 30 */
+/*panaudojant ciklą perrašyti tekstinio tipo kintamųjų reikšmes iš kito galo:
+pvz.: “abcdef” -> “fedcba”*/
+//let zodis = 'abcdef';
+//let tekstas = "";
+
+//for (let i = abcdef.lenght-1)
+
+const abc = 'abcdefg';
+let text = '';
+
+for (let i=0; i <abc.length; i += -1) {
+console.log(i, abc[i], text);
+}
+/*
+Suskaičiuoti, kiek nurodytame intervale yra skaičių, kurie dalijasi be liekanos iš 3, 5 ir 7 atskirai:
+0 - 11
+8 - 31
+-18 - 18
+rezultatą pateikti tokiu formatu:
+Skaičių intervale tarp 0 ir 11, besidalijančių be liekanos iš 3 yra 4 vienetai.
+Skaičių intervale tarp 0 ir 11, besidalijančių be liekanos iš 5 yra 3 vienetai.
+Skaičių intervale tarp 0 ir 11, besidalijančių be liekanos iš 7 yra 2 vienetai.
+*/
+
+/*
+Funkcija pavadinimu “tusciaFunkcija”:
+nepriima jokių kintamųjų
+neatlieka jokios vidinės logikos
+gražina boolean tipo reikšmę “false”
+TESTAS:
+console.log( tusciaFunkcija() );
+rezultatas: false*/
+
+/*const car = ()
+switch (car) {
+    case 1:
+        console.log("car");
+        break;
+default:
+        console.log(false)
+        break;
+}
+
+for (let i = 0; i <= 5; i++){
+    console.log(i);
+}
+
+for (let i = 100; i >= 95; i--){
+    console.log(i)
+}
+
+const mar = [3, 6, 8, 9, 4];
+let sum = 0;
+
+console.log('--------------');
+
+const word = 'a, b, c, d, e, f';
 
 
-
-
+*/
