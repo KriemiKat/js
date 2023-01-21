@@ -131,32 +131,36 @@ if (v.length >= d.length) {
 /*
 Ciklo for panaudojimas
 Suskaičiuoti ką gausime susumavus skaičius intervale tarp (imtinai):
-0 … 0*/
-let zero = 0;
-console.log("zero")
-
-
-/*
+0 ...0
 0 … 4
 0 … 100
 574 … 815
 -50 … 50
 -70 … 30 */
+
+/*a = 0;
+for (let index = 0; a < 4; index++) {
+    const element = array[index];
+    } */
+
+
+    
 /*panaudojant ciklą perrašyti tekstinio tipo kintamųjų reikšmes iš kito galo:
 pvz.: “abcdef” -> “fedcba”*/
 //let zodis = 'abcdef';
 //let tekstas = "";
 
-//for (let i = abcdef.lenght-1)
-
-const abc = 'abcdefg';
-let text = '';
-
-for (let i=0; i <abc.length; i += -1) {
-console.log(i, abc[i], text);
+let word = "abcdefg";
+function reverseString(word) {
+    let reverse = "";
+for (let i = word.length - 1; i >= 0; i--) {
+    reverse += word[i];
 }
-/*
-Suskaičiuoti, kiek nurodytame intervale yra skaičių, kurie dalijasi be liekanos iš 3, 5 ir 7 atskirai:
+return reverse;
+}
+console.log(reverseString('abcdef'));
+
+/*Suskaičiuoti, kiek nurodytame intervale yra skaičių, kurie dalijasi be liekanos iš 3, 5 ir 7 atskirai:
 0 - 11
 8 - 31
 -18 - 18

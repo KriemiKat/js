@@ -19,13 +19,11 @@ for (let i = 0; i <6; i++) {
 /*Suskaičiuoti ką gausime susumavus skaičius intervale tarp (imtinai):
 0 … 0*/
 console.log('------------------');
-const pozymiai = [1, 2, 4, 7, 10]
 
+const mes = ['as', 'tu', 'mes', 'jus'];
 
-
-const vardai = ['ona','jule','zita','daiva'];
-
-for (let i = 0; i < ppl.length; i++) {
-    const hi = 'Sveiki, mano vardas yra ${vardai[i]}';
-    console.log(hi);
+for (let i = 1; i < mes.length; i++) {
+    const name = mes[i];
+    const sms = `sveikas ${name}`;
+    console.log(sms);
 }
