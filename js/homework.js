@@ -53,7 +53,15 @@ console.log(visi);
 const visi2 = spalva4 + ', ' + spalva3 + ', ' + spalva2 + ', ' + spalva1 + ', ' + spalva;
 console.log(visi2);
 
-/*Lyginant, jei rezultatas tenkina palyginimo sąlygą, tai į console išvesti žodį “Pomidoras”, o jei sąlyga nėra tenkinama, išvesti sakinį “Bandykite kitą kartą.”.*/
+/*Lyginant, jei rezultatas tenkina palyginimo sąlygą, tai į console išvesti žodį “Pomidoras”, o jei sąlyga nėra tenkinama, išvesti sakinį “Bandykite kitą kartą.”.
+Tarpusavyje palyginti skaičiaus tipo kintamuosius:
+kuris didesnis
+kuris mažesnis
+ar jie lygūs
+ar jie nelygūs
+kuris didesnis arba lygus
+kuris mažesnis arba lygus
+*/
 console.log('-------------------');
 
 const a = 7;
@@ -90,7 +98,43 @@ if (a >= b) {
     console.log('bandykite dar karta');
 }
 
+//Išvesti teksto tipo kintamųjų ilgius
+/*const spalva = 'geltona';
+console.log(spalva)
+const spalva1 = 'balta';
+console.log(spalva1)
+const  spalva2 = 'melyna';
+console.log(spalva2)
+const  spalva3 = 'ruda';
+console.log(spalva3)
+const spalva4 = 'juoda';
+console.log(spalva4)*/
+
+console.log('Spalvos ilgis:', spalva.length)
+console.log('Spalvos2 ilgis:', spalva2.length)
+console.log('Spalvos3 ilgis:', spalva3.length)
+console.log('Spalvos4 ilgis:', spalva4.length)
+
 console.log('-------------------');
+/*Išvesti sąrašo tipo kintamųjų ilgius
+Tarpusavyje palyginti sąrašo tipo kintamųjų ilgius:
+kuris didesnis
+kuris mažesnis
+ar jie lygūs
+ar jie nelygūs
+kuris didesnis arba lygus
+kuris mažesnis arba lygus
+
+const v = [1, 2, 3, 4, 5];
+console.log(v);
+const d = [2, 4, 6, 7, 9];
+console.log(d);
+const t = [3, 7, 6, 1, 7];
+console.log(t);*/
+
+console.log('V ilgis:', v.length)
+console.log('D ilgis:', d.length)
+console.log('T ilgis:', t.length)
 
 if (v.length > d.length) {
     console.log('pomidoras');
@@ -128,9 +172,14 @@ if (v.length >= d.length) {
     console.log('bandykite dar karta');
 }
 
+
 /*
 Ciklo for panaudojimas
 Suskaičiuoti ką gausime susumavus skaičius intervale tarp (imtinai):
+
+fuction rangeSum() {
+    return 0;
+}
 0 ...0
 0 … 4
 0 … 100
@@ -138,71 +187,92 @@ Suskaičiuoti ką gausime susumavus skaičius intervale tarp (imtinai):
 -50 … 50
 -70 … 30 */
 
-/*a = 0;
-for (let index = 0; a < 4; index++) {
-    const element = array[index];
-    } */
+console.clear();
 
+function rangeSum(from, to) {
+    if (typeof from !== 'number') {
+        return 'ERROR: pirmasis parametras turi buti skaicius.';
+    }
+    if (!isFinite(from) || from % 1 !== 0) {
+        return 'ERROR: pirmasis parametras turi buti sveikasis skaicius.';
+    }
 
-    
-/*panaudojant ciklą perrašyti tekstinio tipo kintamųjų reikšmes iš kito galo:
-pvz.: “abcdef” -> “fedcba”*/
-//let zodis = 'abcdef';
-//let tekstas = "";
+    if (typeof to !== 'number') {
+        return 'ERROR: antrasis parametras turi buti skaicius.';
+    }
+    if (!Number.isInteger(to)) {
+        return 'ERROR: antrasis parametras turi buti sveikasis skaicius.';
+    }
 
-let word = "abcdefg";
-function reverseString(word) {
-    let reverse = "";
-for (let i = word.length - 1; i >= 0; i--) {
-    reverse += word[i];
-}
-return reverse;
-}
-console.log(reverseString('abcdef'));
+    // let i = from;
+    // for (; ;) {
+    //     if (i <= to) {
+    //         sum += i++;
+    //     } else {
+    //         break;
+    //     }
+    // }
 
-/*Suskaičiuoti, kiek nurodytame intervale yra skaičių, kurie dalijasi be liekanos iš 3, 5 ir 7 atskirai:
-0 - 11
-8 - 31
--18 - 18
-rezultatą pateikti tokiu formatu:
-Skaičių intervale tarp 0 ir 11, besidalijančių be liekanos iš 3 yra 4 vienetai.
-Skaičių intervale tarp 0 ir 11, besidalijančių be liekanos iš 5 yra 3 vienetai.
-Skaičių intervale tarp 0 ir 11, besidalijančių be liekanos iš 7 yra 2 vienetai.
-*/
+    let sum = 0;
 
-/*
-Funkcija pavadinimu “tusciaFunkcija”:
-nepriima jokių kintamųjų
-neatlieka jokios vidinės logikos
-gražina boolean tipo reikšmę “false”
-TESTAS:
-console.log( tusciaFunkcija() );
-rezultatas: false*/
+    if (from > to) {
+        const x = from;
+        from = to;
+        to = x;
+    }
 
-/*const car = ()
-switch (car) {
-    case 1:
-        console.log("car");
-        break;
-default:
-        console.log(false)
-        break;
+    for (let i = from; i <= to; i++) {
+        sum += i;
+    }
+
+    return sum;
 }
 
-for (let i = 0; i <= 5; i++){
-    console.log(i);
-}
+console.log(rangeSum(true, 4));
+console.log(rangeSum(4, false));
+console.log(rangeSum('dfsd', 4));
+console.log(rangeSum(4, 'ergg'));
+console.log(rangeSum([], 4));
+console.log(rangeSum(4, []));
+console.log(rangeSum(null, 4));
+console.log(rangeSum(4, null));
+console.log(rangeSum(undefined, 4));
+console.log(rangeSum(4, undefined));
+console.log(rangeSum(4));
+console.log(rangeSum());
+console.log(rangeSum(0, 3.14));
+console.log(rangeSum(3.14, 8));
+console.log(rangeSum(3.14, 8.88));
+console.log(rangeSum(0, Infinity));
+console.log(rangeSum(Infinity, 8));
+console.log(rangeSum(Infinity, 8.88));
+console.log(rangeSum(0, -Infinity));
+console.log(rangeSum(-Infinity, 8));
+console.log(rangeSum(-Infinity, 8.88));
+console.log(rangeSum(0, NaN));
+console.log(rangeSum(NaN, 8));
+console.log(rangeSum(NaN, NaN));
 
-for (let i = 100; i >= 95; i--){
-    console.log(i)
-}
+console.log(rangeSum(0, 4), '-->', 10);
+console.log(rangeSum(0, 100), '-->', 5050);
+console.log(rangeSum(-50, 50), '-->', 0);
+console.log(rangeSum(0, 0), '-->', 0);
+console.log(rangeSum(5, 5), '-->', 5);
+console.log(rangeSum(-7, -7), '-->', -7);
+console.log(rangeSum(-70, 30), '-->', -2020);
+console.log(rangeSum(574, 815), '-->', 168069);
 
-const mar = [3, 6, 8, 9, 4];
-let sum = 0;
+console.log(rangeSum(4, 0), '-->', 10);
+console.log(rangeSum(100, 0), '-->', 5050);
 
-console.log('--------------');
+console.log('------------');
+console.log(rangeSum(0, 1000000000));
 
-const word = 'a, b, c, d, e, f';
+console.assert(rangeSum(0, 4) === 10);
+console.assert(rangeSum(0, 100) === 5050, [0, 100, 5050]);
 
 
-*/
+// console.log('---------------');
+// for (let i = 0, j = 5, k = 99; i < j + k && i < 10 && j < 15; i++, j += 2, k -= 10) {
+//     console.log(i, j, k);
+// }
