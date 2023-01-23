@@ -1,19 +1,23 @@
-const { Console } = require("console");
+console.clear();
 
+// single-line comment
 
-const a = 7
-const b = 8
-const c = 100
+/*
+multi
+line
+comment
+*/
 
+console.log(5);
+console.log(3, 14);
+console.log(3.14);
+console.log(1, 2, 3, 4, 5, 6);
 
-console.log(a-6+b+c);
-
-const liekana = 31 % 3
-console.log(liekana);
-
-const html = <header>
-<Image.search> 
-    
-</Image.search>
-
-</header>
+/*
+Esmines busimos temos:
+- kintamieji (atsiminti informacija, duomenys)
+- palyginimas
+- ciklai (proceduru kartojimas)
+- funkcijos
+- event listeners (narsykleje)
+*/
