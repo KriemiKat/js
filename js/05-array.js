@@ -110,3 +110,6 @@ console.log(kelintas7);
 
 const kelintas777 = jonas.indexOf(777);
 console.log(kelintas777);
+
+console.clear
+
