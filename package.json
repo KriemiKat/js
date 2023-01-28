@@ -4,7 +4,9 @@
   "description": "",
   "main": "01-console.js",
   "scripts": {
-    "pazymiu": "nodemon ./js/pazymiu.vidurkis.js",
+    "arraymet": "nodemon ./js/19-array-methods.js",
+    "codewars": "nodemon ./js/codewars.js",
+    "ciklai": "nodemon ./js/21-ciklai.js",
     "range": "nodemon ./js/11-range.js",
     "function": "nodemon ./js/09-function.js",
     "for": "nodemon ./js/08-for.js",
@@ -25,3 +27,7 @@
     "nodemon": "^2.0.20"
   }
 }
+
+
+    
+    
