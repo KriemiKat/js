@@ -23,13 +23,45 @@ function addLength(strwords) {
     console.clear();
 
     function makeNegative(num) {
-        if(num >= 1)
-        {console.log(`${-num}`);}
+        if(num > 0)
+        {return `${-num}`;}
         else {
-          console.log(`${num}`);
+          return (num);
         }
       }
 
       console.log(makeNegative(5))
       console.log(makeNegative(1))
       console.log(makeNegative(-9))
+      console.log(makeNegative(0))
+
+      console.clear();
+
+    console.log('--------------------------');
+
+    function removeChar(str){
+        let du = str.slice(1, -1);
+        return du;
+        };
+        console.log(removeChar('labukas'));
+
+        function booleanToString(b){
+          if (b === true) {console.log('true')}
+            else{
+              console.log('false');
+            }
+          }
+         console.log(booleanToString(true));
+
+         console.log('---------------------------');
+      
+       console.log('---------------------------');
+       function createArray(number){
+        var newArray = [];
+        
+        for(var counter = 1; counter <= number;){
+          newArray.push(counter);
+        }
+        
+        return newArray;
+      }

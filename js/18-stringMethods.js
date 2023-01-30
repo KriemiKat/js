@@ -9,7 +9,7 @@ console.log(abc.charCodeAt(0));
 
 console.log('a', 'A', 'a' > 'A');
 console.log('a'.charCodeAt(0), 'A'.charCodeAt(0));
-
+console.log('----------------------------')
 console.log(abc.indexOf('F'));
 console.log(abc.indexOf('defg'));
 
